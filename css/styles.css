@@ -23,7 +23,7 @@ header {
     font-weight: 500;
     color: #edf0f1;
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 
 .nav__links {
@@ -123,6 +123,7 @@ header {
     .nav__links,
     .cta {
         display: none;
+        font-size: 100%;
     }
     .menu {
         display: initial;
