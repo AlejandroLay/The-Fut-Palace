@@ -13,8 +13,8 @@ header {
 }
 
 .logo {
-    cursor: pointer;
-}
+    cursor: pointer
+}   
 
 .nav__links a,
 .cta,
@@ -127,4 +127,5 @@ header {
     .menu {
         display: initial;
     }
+    
 }
