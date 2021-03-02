@@ -8,13 +8,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 8px 10%;
     background-color: #303030;
 }
 
 .logo {
     cursor: pointer
-}   
+}
 
 .nav__links a,
 .cta,
@@ -128,5 +128,4 @@ header {
     .menu {
         display: initial;
     }
-    
 }
