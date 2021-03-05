@@ -13,6 +13,9 @@ header {
     background-color: #303030;
 }
 
+
+/*-----------------------------------ESTILOS IMAGENES----------------------------------------------------------*/
+
 .row:after {
     content: "";
     display: table;
@@ -35,13 +38,32 @@ header {
     width: 100%;
 }
 
-.bordesito {
+.three-column {
+    float: left;
+    width: 33.33%;
+    padding: 2%;
+}
+
+.three-column p {
+    text-align: center;
+    padding: 1% 0%;
+    font-size: 1vw;
+}
+
+.three-column img {
+    width: 100%;
+}
+
+.precio {
     color: red;
 }
 
 .logo {
     cursor: pointer;
 }
+
+
+/*-----------------------------------NAVEGADOR NO MOVIL----------------------------------------------------------*/
 
 .nav__links a,
 .cta,
@@ -84,7 +106,7 @@ header {
 }
 
 
-/* Mobile Nav */
+/*ESTILOS NAVEGADOR MOVIL*/
 
 .menu {
     display: none;
@@ -161,12 +183,20 @@ header {
     .four-column {
         width: 50%;
     }
+    .three-column p {
+        text-align: center;
+        font-size: 2.6vw;
+    }
+    .three-column {
+        width: 50%;
+    }
 }
 
 
-/*-------------------------------------------------------PARTE SUPERIOR------------------------------------------*/
+/*-------------------------------------------------------BUSCADOR CON CATEGORIAS------------------------------------------*/
 
-.wrap {
+
+/**.wrap {
     max-width: 1100px;
     width: 90%;
     margin: auto;
@@ -218,6 +248,9 @@ header {
 
 /* PRODUCTOS ============*/
 
+
+/**
+
 .products-list {
     width: 82%;
     display: flex;
@@ -252,6 +285,9 @@ header {
 
 
 /* RESPONSIVE */
+
+
+/**
 
 @media screen and (max-width: 1100px) {
     .products-list .product-item {
@@ -309,19 +345,14 @@ header {
         margin-left: 0px;
     }
 }
+**/
 
 
 /*-------------------------------------------FOOTER--------------------------------------------------------------------------*/
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
 footer {
     width: 100%;
-    background: #202020;
+    background: #303030;
     color: white;
 }
 
@@ -347,7 +378,7 @@ footer {
 
 .colum1 p {
     font-size: 14px;
-    color: #C7C7C7;
+    color: white;
     margin-top: 20px;
 }
 
@@ -359,20 +390,20 @@ footer {
     font-size: 22px;
 }
 
-.rows {
+.contairner-redes-sociales {
     margin-top: 20px;
     display: flex;
 }
 
-.rows img {
+.contairner-redes-sociales img {
     width: 36px;
     height: 36px;
 }
 
-.rows label {
+.contairner-redes-sociales label {
     margin-top: 10px;
     margin-left: 20px;
-    color: #C7C7C7;
+    color: white;
 }
 
 .colum3 {
@@ -383,17 +414,17 @@ footer {
     font-size: 22px;
 }
 
-.row2 {
+.contairner-info {
     margin-top: 20px;
     display: flex;
 }
 
-.row2 img {
+.contairner-info img {
     width: 36px;
     height: 36px;
 }
 
-.row2 label {
+.contairner-info label {
     margin-top: 10px;
     margin-left: 20px;
     max-width: 140px;
@@ -401,7 +432,7 @@ footer {
 
 .container-footer {
     width: 100%;
-    background: #101010;
+    background: #303030;
 }
 
 .footer {
@@ -410,21 +441,6 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-}
-
-.copyright {
-    color: #C7C7C7;
-}
-
-.copyright a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.information a {
-    text-decoration: none;
-    color: #C7C7C7;
 }
 
 @media screen and (max-width: 1100px) {
