@@ -13,6 +13,62 @@ header {
     background-color: #303030;
 }
 
+.alerta {
+    text-align: center;
+    padding: 1% 0% 1% 0%;
+    background-color: gray;
+    font-size: 0.9vw;
+}
+
+
+/*-----------------------------------ESTILOS IMAGENES----------------------------------------------------------*/
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.four-column {
+    float: left;
+    width: 25%;
+    padding: 2%;
+}
+
+.four-column p {
+    text-align: center;
+    padding: 1% 0%;
+    font-size: 1vw;
+}
+
+.four-column img {
+    width: 100%;
+}
+
+.three-column {
+    float: left;
+    width: 33.33%;
+    padding: 2%;
+}
+
+.three-column p {
+    text-align: center;
+    padding: 1% 0%;
+    font-size: 1vw;
+}
+
+.three-column img {
+    width: 100%;
+}
+
+.precio {
+    color: red;
+}
+
+.logo {
+    cursor: pointer;
+}
+
 
 /*-----------------------------------NAVEGADOR NO MOVIL----------------------------------------------------------*/
 
@@ -140,6 +196,10 @@ header {
     }
     .three-column {
         width: 50%;
+    }
+    .alerta {
+        font-size: 2.2vw;
+        padding: 2% 0% 2% 0%;
     }
 }
 
