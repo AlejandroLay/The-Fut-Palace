@@ -167,7 +167,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .nav__links,
     .cta {
         display: none;
@@ -189,6 +189,9 @@ header {
     }
     .three-column {
         width: 50%;
+    }
+    .responsive-imagen-principio {
+        width: 100%;
     }
 }
 
