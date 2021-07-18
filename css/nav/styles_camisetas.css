@@ -237,6 +237,11 @@ footer {
     display: flex;
 }
 
+.contairner-info a {
+    color: white;
+    text-decoration: none;
+}
+
 .contairner-info img {
     width: 36px;
     height: 36px;
