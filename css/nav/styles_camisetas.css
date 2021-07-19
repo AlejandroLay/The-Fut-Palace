@@ -36,119 +36,55 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/*-----------------------------------NAVEGADOR NO MOVIL----------------------------------------------------------*/
+/*-----------------------------------NAVEGADOR----------------------------------------------------------*/
 
-.nav__links a,
-.cta,
-.overlay__content a {
-    font-weight: 500;
-    color: #edf0f1;
-    text-decoration: none;
-    font-size: 1.2vw;
-}
-
-.nav__links {
+ul,
+ol {
     list-style: none;
-    display: flex;
 }
 
-.nav__links li {
-    padding: 0px 20px;
-    font-size: 1.3vw;
+.nav {
+    margin: auto;
+    width: 500px;
 }
 
-.nav__links li a {
-    transition: color 0.3s ease 0s;
+.nav>li {
+    float: left;
 }
 
-.nav__links li a:hover {
-    color: #7fb12e;
-}
-
-.cta {
-    padding: 9px 25px;
-    background-color: #7fb12e;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease 0s;
-}
-
-.cta:hover {
-    background-color: #7fb12e;
-}
-
-
-/*ESTILOS NAVEGADOR MOVIL*/
-
-.menu {
-    display: none;
-}
-
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: #24252a;
-    overflow-x: hidden;
-    transition: width 0.5s ease 0s;
-}
-
-.overlay--active {
-    width: 100%;
-}
-
-.overlay__content {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.overlay a {
-    padding: 15px;
-    font-size: 36px;
+.nav li a {
+    background-color: #303030;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
     display: block;
-    transition: color 0.3s ease 0s;
+    font-size: 15px;
 }
 
-.overlay a:hover,
-.overlay a:focus {
-    color: #7fb12e;
+.nav li a:hover {
+    background-color: #434343;
 }
 
-.overlay .close {
+.nav li ul {
+    display: none;
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: #edf0f1;
+    min-width: 150px;
 }
 
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px;
-    }
-    .overlay .close {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+.nav li:hover>ul {
+    display: block;
 }
 
-@media only screen and (max-width: 800px) {
-    .nav__links,
-    .cta {
-        display: none;
-        font-size: 100%;
-    }
-    .menu {
-        display: initial;
-    }
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+@media only screen and (max-width: 900px) {
     .four-column p {
         text-align: center;
         font-size: 2.6vw;
@@ -162,6 +98,9 @@ body::-webkit-scrollbar-thumb {
     }
     .three-column {
         width: 50%;
+    }
+    .responsive-imagen-principio {
+        width: 100%;
     }
 }
 
