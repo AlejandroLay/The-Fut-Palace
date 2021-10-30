@@ -13,29 +13,6 @@ header {
     background-color: #303030;
 }
 
-
-/*-----------------------------------BOTON WHATSSAP----------------------------------------------------------*/
-
-.fab {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-}
-
-.fab:hover {
-    opacity: 0.7;
-}
-
-.fa-whatsapp {
-    background: #45bbff;
-    color: white;
-}
-
-
 /*-----------------------------------SLIDER----------------------------------------------------------*/
 
 .slider {
@@ -93,25 +70,101 @@ header {
     .slider img {
         height: 100vh;
     }
+    header {
+        padding: 3% 4% 3% 4%;
+    }
 }
 
 
-/*-----------------------------------SCROLL----------------------------------------------------------
+/*-----------------------------------BOTON WHATSSAP----------------------------------------------------------*/
 
-body::-webkit-scrollbar {
-    width: 12px;
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+
 }
 
-body::-webkit-scrollbar-track {
-    background: #303030;
+.float:hover {
+    text-decoration: none;
+    color: #25d366;
+    background-color: #fff;
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: #7fb12e;
-    border-radius: 20px;
-    border: 3px solid #303030;
+.my-float {
+    margin-top: 16px;
 }
 
+/*---------------------------------- HAMBURGUESA --------------------------------------------------------------*/
+
+.hamburguesa {
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    .hamburguesa {
+        display: block;
+        position: fixed;
+        right: 5%;
+        top: 3%;
+        z-index: 2;
+    }
+    .espacio {
+        display: flex;
+        height: 75vh;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #303030;
+        height: 0vh;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        margin-top: 85px;
+        font-size: 23px;
+        font-weight: 700;
+        z-index: 2;
+    }
+    .nav-menu li {
+        display: none;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        margin-bottom: 50px 0;
+        transition: all 0.5s;
+        align-items: center;
+    }
+    .nav-menu li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+    }
+    #check {
+        display: none;
+    }
+    #check:checked ~ .nav-menu {
+        height: 100vh;
+    }
+    #check:checked ~ .nav-menu li {
+        display: block;
+    }
+}
 
 /*-----------------------------------ESTILOS IMAGENES----------------------------------------------------------*/
 
@@ -165,45 +218,31 @@ ol {
     list-style: none;
 }
 
-.nav {
-    margin: auto;
-    width: 500px;
-}
-
-.nav>li {
-    float: left;
-}
-
-.nav li a {
-    background-color: #303030;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 12px;
-    display: block;
-    font-size: 15px;
-}
-
-.nav li a:hover {
-    background-color: #434343;
-}
-
-.nav li ul {
+#check {
     display: none;
-    position: absolute;
-    min-width: 150px;
 }
 
-.nav li:hover>ul {
-    display: block;
+nav {
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
 
-.nav li ul li {
-    position: relative;
+.espacio {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
 }
-
-.nav li ul li ul {
-    right: -140px;
-    top: 0px;
+.espacio li {
+    width: auto;
+    margin: 15px;
+}
+.espacio li a {
+    color: white;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 900px) {
