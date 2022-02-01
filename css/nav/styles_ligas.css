@@ -9,42 +9,107 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 4%;
+    padding: 1% 4% 1% 4%;
     background-color: #303030;
 }
 
-.alerta {
+
+/*-----------------------------------BOTON WHATSSAP----------------------------------------------------------*/
+
+.float {
+    position: fixed;
+    width: 77px;
+    height: 77px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
     text-align: center;
-    padding: 1% 0% 1% 0%;
-    background-color: gray;
-    font-size: 0.9vw;
+    font-size: 42.5px;
+    box-shadow: 2px 2px 3px #999;
 }
 
-.contairner-info a {
-    color: white;
+.float:hover {
     text-decoration: none;
+    color: #25d366;
+    background-color: #fff;
+}
+
+.my-float {
+    margin-top: 16px;
 }
 
 
-/*-----------------------------------SCROLL----------------------------------------------------------*/
+/*---------------------------------- HAMBURGUESA --------------------------------------------------------------*/
 
-body::-webkit-scrollbar {
-    width: 12px;
-    /* width of the entire scrollbar */
+.hamburguesa {
+    display: none;
+    color: white;
+    font-size: 30px;
 }
 
-body::-webkit-scrollbar-track {
-    background: #303030;
-    /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #7fb12e;
-    /* color of the scroll thumb */
-    border-radius: 20px;
-    /* roundness of the scroll thumb */
-    border: 3px solid #303030;
-    /* creates padding around scroll thumb */
+@media only screen and (max-width: 700px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+    .hamburguesa {
+        display: block;
+        position: fixed;
+        right: 5%;
+        top: 3%;
+        z-index: 2;
+    }
+    .espacio {
+        display: flex;
+        height: 75vh;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #303030;
+        height: 0vh;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        margin-top: 85px;
+        font-size: 23px;
+        font-weight: 700;
+        z-index: 2;
+    }
+    .nav-menu li {
+        display: none;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        margin-bottom: 50px 0;
+        transition: all 0.5s;
+        align-items: center;
+    }
+    .nav-menu li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+    }
+    #check {
+        display: none;
+    }
+    #check:checked~.nav-menu {
+        height: 100vh;
+    }
+    #check:checked~.nav-menu li {
+        display: block;
+    }
+    .float {
+        right: 15px;
+        bottom: 15px;
+    }
 }
 
 
@@ -94,75 +159,6 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
     cursor: pointer;
-}
-
-
-/*-----------------------------------NAVEGADOR----------------------------------------------------------*/
-
-ul,
-ol {
-    list-style: none;
-}
-
-.nav {
-    margin: auto;
-    width: 500px;
-}
-
-.nav>li {
-    float: left;
-}
-
-.nav li a {
-    background-color: #303030;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 12px;
-    display: block;
-    font-size: 15px;
-}
-
-.nav li a:hover {
-    background-color: #434343;
-}
-
-.nav li ul {
-    display: none;
-    position: absolute;
-    min-width: 150px;
-}
-
-.nav li:hover>ul {
-    display: block;
-}
-
-.nav li ul li {
-    position: relative;
-}
-
-.nav li ul li ul {
-    right: -140px;
-    top: 0px;
-}
-
-@media only screen and (max-width: 900px) {
-    .four-column p {
-        text-align: center;
-        font-size: 2.6vw;
-    }
-    .four-column {
-        width: 50%;
-    }
-    .three-column p {
-        text-align: center;
-        font-size: 2.6vw;
-    }
-    .three-column {
-        width: 50%;
-    }
-    .responsive-imagen-principio {
-        width: 100%;
-    }
 }
 
 
@@ -271,5 +267,59 @@ footer {
     .colum2,
     .colum3 {
         margin-top: 40px;
+    }
+}
+
+
+/*-----------------------------------NAVEGADOR----------------------------------------------------------*/
+
+ul,
+ol {
+    list-style: none;
+}
+
+#check {
+    display: none;
+}
+
+nav {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.espacio {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.espacio li {
+    width: auto;
+    margin: 15px;
+}
+
+.espacio li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .four-column p {
+        text-align: center;
+        font-size: 2.6vw;
+    }
+    .four-column {
+        width: 50%;
+    }
+    .three-column p {
+        text-align: center;
+        font-size: 2.6vw;
+    }
+    .three-column {
+        width: 50%;
     }
 }
